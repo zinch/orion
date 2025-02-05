@@ -21,7 +21,7 @@ public class TransactionService {
     var atmWithdrawal = new Transaction();
     atmWithdrawal.setType("Withdrawal");
     atmWithdrawal.setDate("2025-01-25");
-    atmWithdrawal.setAccountNumber("987654321");
+    atmWithdrawal.setAccountNumber("123456789");
     atmWithdrawal.setCurrency("EUR");
     atmWithdrawal.setAmount("50.00");
     atmWithdrawal.setMerchantName("ATM Terminal");
@@ -31,7 +31,7 @@ public class TransactionService {
     var salaryCredit = new Transaction();
     salaryCredit.setType("Credit");
     salaryCredit.setDate("2025-01-15");
-    salaryCredit.setAccountNumber("112233445");
+    salaryCredit.setAccountNumber("123456789");
     salaryCredit.setCurrency("INR");
     salaryCredit.setAmount("75000.00");
     salaryCredit.setMerchantName("Employer Pvt Ltd");
@@ -41,7 +41,7 @@ public class TransactionService {
     var billPayment = new Transaction();
     billPayment.setType("Bill Payment");
     billPayment.setDate("2025-01-20");
-    billPayment.setAccountNumber("556677889");
+    billPayment.setAccountNumber("123456789");
     billPayment.setCurrency("GBP");
     billPayment.setAmount("120.75");
     billPayment.setMerchantName("Utility Provider");

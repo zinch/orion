@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: mysql:8
+    container_name: orion-mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: orion
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - '13306:3306'

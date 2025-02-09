@@ -1,6 +1,5 @@
 package com.orion.api;
 
-import com.orion.model.Transaction;
 import com.orion.service.TransactionService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +18,10 @@ public class TransactionController {
   }
 
   @GetMapping("/{accountNumber}")
-  List<Transaction> getTransactions(@PathVariable String accountNumber) {
-    return transactionService.findAllByAccountNumber(accountNumber);
+  public List<TransactionDto> getTransactions(@PathVariable String accountNumber) {
+    return transactionService.findAllByAccountNumber(accountNumber)
+            .stream()
+            .map(TransactionDto::from)
+            .toList();
   }
 }
